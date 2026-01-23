@@ -1,0 +1,17 @@
+Algoritmo EnergiaEletrica {
+ 	real valor_conta, PorcentoMulta, juros, valorjuro, valormulta,valortotal; 
+	inteiro dia;
+	valor_conta = 230.0;
+	PorcentoMulta = 2;
+	juros = 0.3;
+	escreva ("quantos dias de atraso?");
+	leia(dia);
+
+
+	valormulta = valor_conta * (2/100);
+	valorjuro = valor conta * (porcento multa/100) * dia
+	valortotal = valor_conta + valorjuro + valormulta;
+	escreva ("O valor total é :" , valortotal );
+	
+	  
+	 
