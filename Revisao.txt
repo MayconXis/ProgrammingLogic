@@ -1,0 +1,480 @@
+# 📌 Java Básico – Resumo para Consulta Rápida (Cheat Sheet)
+
+---
+
+## 1️⃣ Estrutura Sequencial (Base de tudo)
+
+### Operadores Aritméticos
+
+* `+` adição
+* `-` subtração
+* `*` multiplicação
+* `/` divisão
+* `%` módulo (resto da divisão)
+
+### Precedência
+
+1. `* / %`
+2. `+ -`
+
+Exemplos:
+
+* `14 % 3 = 2`
+* `3 + 2 * 4 = 11`
+* `(3 + 2) * 4 = 20`
+
+---
+
+## 2️⃣ Variáveis e Tipos Primitivos
+
+### Tipos Inteiros
+
+* `byte` → 8 bits (-128 a 127)
+* `short` → 16 bits
+* `int` → 32 bits (**padrão**)
+* `long` → 64 bits (`10L`)
+
+### Tipos Reais
+
+* `float` → 32 bits (`1.5f`)
+* `double` → 64 bits (**padrão**)
+
+### Outros
+
+* `char` → 16 bits (1 caractere Unicode: `'A'`)
+* `boolean` → `true` ou `false`
+* `String` → texto
+
+Declaração:
+
+```java
+int idade = 25;
+double altura = 1.68;
+char sexo = 'F';
+```
+
+---
+
+## 3️⃣ Entrada e Saída de Dados
+
+### Scanner
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+Leitura:
+
+* `sc.next()` → palavra
+* `sc.nextInt()` → inteiro
+* `sc.nextDouble()` → double
+* `sc.next().charAt(0)` → char
+* `sc.nextLine()` → linha inteira
+
+⚠️ **Problema do Buffer**
+
+```java
+int x = sc.nextInt();
+sc.nextLine(); // limpa buffer
+String nome = sc.nextLine();
+```
+
+---
+
+## 4️⃣ Saída Formatada (printf)
+
+```java
+System.out.printf("%.2f%n", valor);
+```
+
+Marcadores:
+
+* `%d` → inteiro
+* `%f` → double
+* `%s` → String
+* `%c` → char
+* `%n` → quebra de linha
+
+### Localidade (ponto decimal)
+
+```java
+Locale.setDefault(Locale.US);
+```
+
+---
+
+## 5️⃣ Processamento e Casting
+
+### Casting (conversão explícita)
+
+```java
+double r = (double) a / b;
+int x = (int) y; // perde decimais
+```
+
+⚠️ Divisão inteira:
+
+```java
+int a = 5, b = 2;
+double r = a / b; // 2.0 (errado)
+double r = (double) a / b; // 2.5 (certo)
+```
+
+---
+
+## 6️⃣ Estrutura Condicional
+
+### if / else
+
+```java
+if (condicao) {
+}
+else {
+}
+```
+
+### else if
+
+```java
+if (x < 12) {
+}
+else if (x < 18) {
+}
+else {
+}
+```
+
+### Operadores Comparativos
+
+* `>` `<` `>=` `<=` `==` `!=`
+
+### Operadores Lógicos
+
+* `&&` (E)
+* `||` (OU)
+* `!` (NÃO)
+
+---
+
+## 7️⃣ Switch-Case
+
+```java
+switch (x) {
+  case 1:
+    break;
+  case 2:
+    break;
+  default:
+    break;
+}
+```
+
+---
+
+## 8️⃣ Operador Ternário
+
+```java
+double desconto = (preco < 20) ? preco * 0.1 : preco * 0.05;
+```
+
+---
+
+## 9️⃣ Estruturas de Repetição
+
+### while (quando não sabe quantas vezes)
+
+```java
+while (condicao) {
+}
+```
+
+### for (quando sabe quantas vezes)
+
+```java
+for (int i = 0; i < 5; i++) {
+}
+```
+
+### do-while (executa pelo menos uma vez)
+
+```java
+do {
+} while (condicao);
+```
+
+---
+
+## 🔟 Funções (Métodos)
+
+```java
+public static int max(int a, int b, int c) {
+  return Math.max(a, Math.max(b, c));
+}
+```
+
+Vantagens:
+
+* Reutilização
+* Organização
+* Modularização
+
+---
+
+## 1️⃣1️⃣ Funções Matemáticas (Math)
+
+* `Math.sqrt(x)` → raiz quadrada
+* `Math.pow(x, y)` → potência
+* `Math.abs(x)` → valor absoluto
+
+⚠️ Sempre retornam `double`
+
+---
+
+## 1️⃣2️⃣ String – Funções Úteis
+
+* `toLowerCase()` / `toUpperCase()`
+* `trim()`
+* `substring(inicio, fim)`
+* `replace()`
+* `indexOf()` / `lastIndexOf()`
+* `split(" ")`
+
+---
+
+## 1️⃣3️⃣ Operadores Bitwise
+
+* `&` AND
+* `|` OR
+* `^` XOR
+
+Exemplo:
+
+```java
+int n1 = 89;
+int n2 = 60;
+System.out.println(n1 & n2);
+```
+
+---
+
+## 1️⃣4️⃣ Boas Práticas
+
+* Use **camelCase** para variáveis e métodos
+* Use **PascalCase** para classes
+* Sempre inicialize variáveis
+* Indente o código corretamente
+* Feche o `Scanner`
+
+---
+# 🔁 Java – Estruturas Repetitivas (Cheat Sheet)
+
+Material resumido para **consulta rápida no VS Code**, baseado no capítulo de **Estruturas Repetitivas**.
+
+---
+
+## 1️⃣ Quando usar repetição?
+
+Use estruturas repetitivas quando precisar **executar um bloco de código várias vezes**.
+
+* 🔹 **while** → quando **NÃO** sabe quantas vezes vai repetir
+* 🔹 **for** → quando **SABE** quantas vezes vai repetir
+* 🔹 **do-while** → quando precisa executar **pelo menos uma vez**
+
+---
+
+## 2️⃣ Estrutura `while`
+
+### Conceito
+
+Repete enquanto a condição for **verdadeira**.
+
+### Sintaxe
+
+```java
+while (condicao) {
+    comando1;
+    comando2;
+}
+```
+
+### Regra
+
+* Condição **true** → executa e volta
+* Condição **false** → sai do loop
+
+### Exemplo clássico
+
+```java
+int x = 1;
+while (x <= 5) {
+    System.out.println(x);
+    x++;
+}
+```
+
+### Quando usar
+
+✔ Quando **não se sabe previamente** a quantidade de repetições
+
+---
+
+## 3️⃣ Estrutura `for`
+
+### Conceito
+
+Repetição baseada em **contagem**.
+
+### Sintaxe
+
+```java
+for (inicio; condicao; incremento) {
+    comando1;
+    comando2;
+}
+```
+
+### Exemplo
+
+```java
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+```
+
+### Contagem regressiva
+
+```java
+for (int i = 4; i >= 0; i--) {
+    System.out.println(i);
+}
+```
+
+### Regra
+
+* `inicio` → executa **uma vez**
+* `condicao` → testa toda volta
+* `incremento` → executa após cada volta
+
+### Quando usar
+
+✔ Quando **sabe exatamente** quantas vezes irá repetir
+
+---
+
+## 4️⃣ Estrutura `do-while`
+
+### Conceito
+
+Executa o bloco **pelo menos uma vez**, pois a condição é testada no final.
+
+### Sintaxe
+
+```java
+do {
+    comando1;
+    comando2;
+} while (condicao);
+```
+
+### Regra
+
+* Condição **true** → volta
+* Condição **false** → sai
+
+### Exemplo
+
+```java
+char resp;
+do {
+    System.out.print("Deseja repetir (s/n)? ");
+    resp = sc.next().charAt(0);
+} while (resp != 'n');
+```
+
+### Quando usar
+
+✔ Quando precisa executar **ao menos uma vez**, independente da condição
+
+---
+
+## 5️⃣ Exemplos Clássicos de Prova
+
+### Soma até digitar zero
+
+```java
+int soma = 0;
+int x = sc.nextInt();
+
+while (x != 0) {
+    soma += x;
+    x = sc.nextInt();
+}
+
+System.out.println(soma);
+```
+
+---
+
+### Ler N valores (for)
+
+```java
+int n = sc.nextInt();
+int soma = 0;
+
+for (int i = 0; i < n; i++) {
+    soma += sc.n
+```
+
+Não pode começar com dígito (use letra ou _).
+
+
+Não usar acentos ou til.
+
+
+Não pode ter espaço em branco.
+
+Convenções (Sugestão de Mercado)
+
+Camel Case: minhaVariavel, calcularDesconto().
+
+Usado para: pacotes, atributos, métodos, variáveis e parâmetros.
+
+
+Pascal Case: ProdutoService, ContaBancaria.
+
+Usado para: classes.
+
+Funções Úteis para String
+Principais métodos para manipular texto:
+
+Formatar: toLowerCase(), toUpperCase(), trim() (remove espaços extras).
+
+
+Recortar: substring(inicio) ou substring(inicio, fim).
+
+Substituir: replace(char, char) ou replace(string, string).
+
+Buscar: indexOf() (primeira ocorrência) ou lastIndexOf() (última ocorrência).
+
+
+Dividir: str.split(" ") – corta a string com base no separador e gera um array.
+
+Funções (Sintaxe e Métodos)
+Representam um processamento com significado próprio. Em Orientação a Objetos, são chamadas de métodos.
+
+Vantagens
+
+Modularização: divide o código em partes menores.
+
+
+Reaproveitamento: evita repetir o mesmo código várias vezes.
+
+
+Delegação: cada função cuida de uma responsabilidade.d
+
+Comentários em Java
+
+Linha única: Use // para comentários rápidos.
+Múltiplas linhas (Bloco): Use /* para abrir e */ para fechar.
+
+📌 **Objetivo**: material rápido para consulta no VS Code durante estudos e exercícios.
