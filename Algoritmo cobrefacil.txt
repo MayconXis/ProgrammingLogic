@@ -1,0 +1,30 @@
+Algoritmo cobrefacil {
+	literal cliente, ocupacao, email, End, cidade, CPF, RG, DataNasc, celular;
+
+	escreva ( "Cliente:");
+	leia (cliente);
+
+	escreva ("CPF:");
+	leia (CPF);
+
+	escreva ("RG:");
+	leia (RG);
+
+	escreva ("DataNasc:");
+	leia (DataNasc);
+
+	escreva ("End:");
+	leia (End);
+
+	escreva ("Ocupação:");
+	leia (ocupacacao);
+
+	escreva ("Fone/Celular:" );
+	leia (celular);
+
+	escreva ("Email:");
+	leia (email);
+
+	escreva ("Cidade:");
+	leia (cidade); 
+ }

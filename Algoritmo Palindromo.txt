@@ -1,0 +1,35 @@
+Algoritmo Palindromo;
+ {
+	Inteiro N, Ninvertido,Noriginal algarismo; 
+	logico negativo; 
+	negativo = FALSO;
+	NInvertido = 0;
+	Noriginal = N;
+	
+	SE (N < 0)  ENTAO { 
+	N = -N 
+	negativo = VERDADEIRO 
+}
+
+ 	ENQUANTO ( n > 0 ) {
+	algarismo = N % 10;
+	Ninvertido = Ninvertido * 10 + algarismo 
+	N = N / 10;
+} 
+
+	SE ( negativo == verdadeiro) {
+		Ninvertido = -Ninvertido 
+}
+	SE (Noriginal == Ninvertido)  {
+	Escreva("O numero", N, "é apropriado para ser palíndromo"); 
+
+} SENÃO
+    {
+   
+        escreva ("O número ", NOriginal, " NÃO é um palíndromo (inverso é ", NInvertido, ").");
+    }
+}
+	
+
+	
+	

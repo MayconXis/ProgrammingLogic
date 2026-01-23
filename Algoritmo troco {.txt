@@ -1,0 +1,69 @@
+Algoritmo troco { 
+	real preco, dinheiro, troco
+	inteiro n100, n50, n20, n10, n5, n2, m1, m50, m25, m10, m5, m1c; 
+    	inteiro troco_centavos;
+
+ 	preco = 12.95;
+	dinheiro = 100.0;
+
+	troco = dinheiro - preco;
+	escreva ("O troco foi :", troco); 
+	troco_centavos = troco * 100;
+
+
+// Notas de R$ 50,00 (5000 centavos)
+    n50 = troco_centavos / 5000;
+    troco_centavos = troco_centavos % 5000;
+    
+    // Notas de R$ 20,00 (2000 centavos)
+    n20 = troco_centavos / 2000;
+    troco_centavos = troco_centavos % 2000;
+    
+    // Notas de R$ 10,00 (1000 centavos)
+    n10 = troco_centavos / 1000;
+    troco_centavos = troco_centavos % 1000;
+    
+    // Notas de R$ 5,00 (500 centavos)
+    n5 = troco_centavos / 500;
+    troco_centavos = troco_centavos % 500;
+    
+    // Notas de R$ 2,00 (200 centavos)
+    n2 = troco_centavos / 200;
+    troco_centavos = troco_centavos % 200;
+    
+    // MOEDAS
+    
+    // Moedas de R$ 1,00 (100 centavos)
+    m1 = troco_centavos / 100;
+    troco_centavos = troco_centavos % 100;
+    
+    // Moedas de R$ 0,50 (50 centavos)
+    m50 = troco_centavos / 50;
+    troco_centavos = troco_centavos % 50;
+    
+    // Moedas de R$ 0,25 (25 centavos)
+    m25 = troco_centavos / 25;
+    troco_centavos = troco_centavos % 25;
+    
+    // Moedas de R$ 0,10 (10 centavos)
+    m10 = troco_centavos / 10;
+    troco_centavos = troco_centavos % 10;
+    
+    // Moedas de R$ 0,05 (5 centavos)
+    m5 = troco_centavos / 5;
+    
+    escreva("Total de notas/moedas:");
+    
+    SE (n50 > 0) ENTÃO {escreva(n50, " nota(s) de R$ 50,00");}
+    SE (n20 > 0) ENTÃO {escreva(n20, " nota(s) de R$ 20,00");}
+    SE (n10 > 0) ENTÃO {escreva(n10, " nota(s) de R$ 10,00");}
+    SE (n5 > 0) ENTÃO {escreva(n5, " nota(s) de R$ 5,00");}
+    SE (n2 > 0) ENTÃO {escreva(n2, " nota(s) de R$ 2,00");}
+    SE (m1 > 0) ENTÃO {escreva(m1, " moeda(s) de R$ 1,00");}
+    SE (m50 > 0) ENTÃO {escreva(m50, " moeda(s) de R$ 0,50");}
+    SE (m25 > 0) ENTÃO {escreva(m25, " moeda(s) de R$ 0,25");}
+    SE (m10 > 0) ENTÃO {escreva(m10, " moeda(s) de R$ 0,10");}
+    SE (m5 > 0) ENTÃO {escreva(m5, " moeda(s) de R$ 0,05");}
+
+
+ 

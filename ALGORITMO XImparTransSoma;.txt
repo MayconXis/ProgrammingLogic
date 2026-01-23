@@ -1,0 +1,29 @@
+ALGORITMO XImparTransSoma;
+
+{
+ 
+    inteiro X, soma transcorrida, contagem_impares,N_INICIO, contagem_total;    
+    soma_transcorrida = 0;
+    contagem_impares = 0;
+    contagem_total = 0;
+    escreva("Digite um valor inteiro X:");
+    leia(X);
+     N_INICIO = x;
+
+    ENQUANTO (contagem_impares < 6) { 
+
+	soma_transcorrida = soma_transcorrida + X;
+        contagem_total = contagem_total + 1;
+
+        SE (X % 2 != 0) ENTÃO {
+            escreva(X);    
+            contagem_impares = contagem_impares + 1;         }
+
+        X = X + 1;
+        
+    }
+
+    escreva("A soma dos 6 ímpares é:", soma_transcorrida); 
+    escreva("Contagem de números transcorridos:", contagem_total); 
+    escreva("Soma dos números transcorridos (de", N_INICIO, "até", X - 1, ")
+}

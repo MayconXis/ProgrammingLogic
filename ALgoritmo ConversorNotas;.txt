@@ -1,0 +1,22 @@
+ALgoritmo ConversorNotas;
+	{
+	inteiro notas, i;
+
+	PARA (i = 1, i <=30, i = i+ 1) {
+		escreva ("Digite a nota:");
+		leia(notas)
+	 SE (notas >= 90 && nota <=100) ENTAO {
+		escreva ("O aluno" , i , "obteve nota A");
+	} SENAO SE  (notas <= 89) ENTAO {
+		escreva ("O aluno" , i , "obteve nota B");
+	}
+	} SENAO SE  (notas <= 79) ENTAO {
+		escreva ("O aluno" , i , "obteve nota C");
+	}
+	} SENAO SE  (notas <= 69) ENTAO {
+		escreva ("O aluno" , i , "obteve nota D");
+	}
+	} SENAO SE  (notas <= 60) ENTAO {
+		escreva ("O aluno" , i , "obteve nota F");
+	}
+}

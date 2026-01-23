@@ -1,0 +1,25 @@
+ALgoritmo MediaPositivo;
+
+{
+	real N;
+	inteiro contador;
+	inteiro soma;
+	soma = 0.0;
+	contador = 0;
+	
+	PARA ( i = 1; i <= 6; i = i + 1;) {
+		escreva ("Digite o numero :");
+		leia (N);
+		SE (N > 0) ENTAO {
+		contador = contador + 1
+		soma = soma + N  
+}
+	SE (contador > 0) ENTÃO {
+        media = soma / contador;
+        escreva("Total de números positivos:", contador);
+        escreva("A média dos números positivos é:", media);
+    } SENÃO {
+        escreva("Nenhum valor positivo foi digitado.");
+    }
+}
+	

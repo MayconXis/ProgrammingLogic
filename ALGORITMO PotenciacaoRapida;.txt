@@ -1,0 +1,29 @@
+ALGORITMO PotenciacaoRapida;
+{
+    real base;
+    inteiro expoente;
+    real resultado;
+    real potencia_atual_da_base;
+
+    escreva("Digite a base (real):");
+    leia(base);
+    escreva("Digite o expoente (inteiro >= 0):");
+    leia(expoente);
+
+    resultado = 1.0;
+    potencia_atual_da_base = base;
+    SE (expoente == 0) ENTAO {
+        resultado = 1.0;
+    } SENÃO {
+             ENQUANTO (expoente > 0) {
+        
+            SE (expoente % 2 == 1) ENTAO {
+                resultado = resultado * potencia_atual_da_base;
+            }
+
+            potencia_atual_da_base = potencia_atual_da_base * potencia_atual_da_base;
+            expoente = expoente / 2;
+        }
+    }
+    escreva("O resultado da potenciação é: ", resultado);
+}
