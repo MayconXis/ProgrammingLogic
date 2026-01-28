@@ -1,0 +1,27 @@
+ALGORITMO ContagemDeAlgarismos;
+
+    inteiro N, NOriginal, contador;  
+    escreva ("Digite um número inteiro (positivo ou negativo):");
+    leia(N);
+
+    NOriginal = N;
+    contador = 0;
+
+       SE (N < 0) ENTÃO
+    {
+        N = -N; 
+    }
+    
+    SE (N == 0) ENTÃO
+    {
+        contador = 1;
+    }
+    
+    ENQUANTO (N > 0)
+    {
+        N = N / 10; 
+        contador = contador + 1;
+    }
+    escreva ("O número ", NOriginal, " possui ", contador, " algarismos.");
+
+}

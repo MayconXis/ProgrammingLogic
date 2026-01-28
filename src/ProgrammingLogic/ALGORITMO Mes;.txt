@@ -1,0 +1,52 @@
+ALGORITMO Mes;
+{
+    inteiro mes, i;
+
+    escreva("Digite um valor entre 1 e 12: ");
+    leia(mes);
+
+    SE(mes < 1 || mes > 12) ENTÃO{
+        escreva("Valor invalido.");
+    }SENÃO{
+
+        i = mes;
+
+        ENQUANTO(1 == 1){   
+
+            ESCOLHA(i){
+                CASO 1:
+                    escreva("Janeiro");
+                CASO 2:
+                    escreva("Fevereiro");
+                CASO 3:
+                    escreva("Marco");
+                CASO 4:
+                    escreva("Abril");
+                CASO 5:
+                    escreva("Maio");
+                CASO 6:
+                    escreva("Junho");
+                CASO 7:
+                    escreva("Julho");
+                CASO 8:
+                    escreva("Agosto");
+                CASO 9:
+                    escreva("Setembro");
+                CASO 10:
+                    escreva("Outubro");
+                CASO 11:
+                    escreva("Novembro");
+                CASO 12:
+                    escreva("Dezembro");
+            }
+            SE(i == mes - 1) ENTÃO{
+                INTERROMPA;
+            }
+            i = i + 1;
+
+            SE(i > 12) ENTÃO{
+                i = 1;
+            }
+        }
+    }
+}

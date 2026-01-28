@@ -1,0 +1,18 @@
+ALGORITMO BinarioParaDecimal;
+{
+    inteiro binario,digito base, decimal_final;
+    escreva("Digite um número binário inteiro não negativo:");
+    leia(binario);
+     decimal_final = 0;
+     potencia = 1; 
+
+	ENQUANTO (binario > 0) {
+	digito = binario % 10;
+	decimal_final = decimal_final + (digito * potencia);
+	binario = binario / 10; 
+	potencia = potencia * 2;
+    escreva("O número em decimal é: ", decimal_final);
+}
+
+
+

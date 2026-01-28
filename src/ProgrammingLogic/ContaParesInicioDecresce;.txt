@@ -1,0 +1,11 @@
+Algoritmo ContaParesInicioDecrescente;
+	{
+	inteiro i, Ninicio;
+	escreva ("Digite o numero desejado:");
+	leia(Ninicio);
+	
+	PARA (i = 100, i >= Ninicio, i= i - 1) {
+		SE (i % 2 == 0) ENTAO {
+		escreva (i);
+	}
+}
