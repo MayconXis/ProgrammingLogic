@@ -1,0 +1,29 @@
+Algoritmo Inversao numero 
+	inteiro N, Ninvertido, algarismo;
+	logico negativo;
+	escreva ("Escreva N:"); 
+	leia (N);
+    	NInvertido = 0;
+    	negativo = falso;
+	
+    SE (N < 0) ENTÃO
+    {
+        negativo = verdadeiro;
+        N = -N; 
+    }
+	
+	ENQUANTO ( N > 0) {
+	algarismo = n % 10;
+	Ninvertido = Ninvertido * 10 + algarismo;
+	N = N / 10; 
+
+    SE (negativo == verdadeiro) ENTÃO
+    {
+        NInvertido = -NInvertido;
+    }
+    escreva ("O inverso de ", NOriginal, " é: ", NInvertido);
+
+}
+	
+	
+	

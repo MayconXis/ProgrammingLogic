@@ -1,0 +1,16 @@
+Algoritmo descontoImposto {
+	real valor, valorfinal, imposto, desconto,calculaimposto, calculadesconto;
+	escreva ("digite o valor:");
+	leia(valor);
+	escreva ("digite o imposto:");
+	leia (imposto);
+	escreva ("digite o desconto:");
+	leia(desconto);
+
+	calculaimposto = valor * (imposto/100.0);
+	valor = (valor + calculaimposto);
+	calculadesconto = (valor *desconto/100.0);
+	
+	valorfinal = valr - calculadesconto 
+	
+	escreva ("o valor total é :", valortotal);
