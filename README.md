@@ -32,12 +32,6 @@ Os exercícios estão organizados por temas para facilitar a navegação:
 3. Abra o projeto na sua IDE de preferência.
 4. Localize a classe que deseja testar e execute o método main.
 
-👨‍💻 Desenvolvido por: **Maycon Douglas da Silva**  
-📧 Contato: [mayconcontacts@gmail.com]  
-🌐 GitHub: [https://github.com/MayconXis]  
-
-
-Este repositório é alimentado constantemente conforme avanço em meus estudos de Engenharia de Software.
 
 ##  Projetos em Destaque
 
@@ -107,6 +101,17 @@ Além da manipulação de matrizes, o repositório explora diversos padrões de 
 - Manipulação de fluxos de entrada utilizando a classe `Scanner`, tratando diferentes tipos de tokens.
 - Fechamento adequado de recursos para evitar **vazamentos de memória (memory leaks)**.
 - **Formatação de saída** de dados para geração de relatórios técnicos claros e precisos no console.
+
+
+Este repositório é alimentado constantemente conforme avanço em meus estudos de Engenharia de Software.
+
+👨‍💻 Desenvolvido por: **Maycon Douglas da Silva**  
+📧 Contato: [mayconcontacts@gmail.com]  
+🌐 Linkedin:[https://www.linkedin.com/in/maycon-douglas-da-silva-9a791a2aa/]
+
+🌐 GitHub: [https://github.com/MayconXis]  
+
+
 
 
    
